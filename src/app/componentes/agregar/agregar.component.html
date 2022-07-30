@@ -1,0 +1,17 @@
+<div class="container">
+  <form role="form">
+    <div class="form-group">
+      <label for="tipo">Tipo:</label>
+      <input type="text" class="form-control" placeholder="Estudios-Laboral-Proyectos" id="tipo" name="tipo" [(ngModel)]="tareaNueva.tipo">
+    </div>
+    <div class="form-group">
+      <label for="foto">Foto:</label>
+      <input type="text" class="form-control" id="foto" name="foto" [(ngModel)]="tareaNueva.foto">
+    </div>
+    <div class="form-group">
+      <label for="actividad">Actividad:</label>
+      <input type="text" class="form-control" id="actividad" name="actividad" [(ngModel)]="tareaNueva.actividad">
+    </div>
+    <button class="btn btn-primary" (click)="agregarTarea()">Guardar</button>
+  </form>
+  </div>

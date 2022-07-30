@@ -1,0 +1,50 @@
+<body>
+<div class="container">
+  <button class="btn btn-primary" [routerLink]="['/agregar']" routerLinkActive="router-link-active" *ngIf="ulogged !=''">Agregar</button>
+
+  <button class="btn btn-danger" (click)="salir()" *ngIf="ulogged !=''">Salir</button><table class="table">
+    <thead>
+
+    </thead>
+
+    <tbody>
+      <h1>Estudios</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Estudios'">
+          <div class="row">
+              <td>{{x.actividad}}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="eliminar(x.id)" *ngIf="ulogged !=''">Eliminar</button>
+                <button class="btn btn-warning btn-sm" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active" *ngIf="ulogged !=''">Modificar</button>
+              </td>
+          </div>
+        </div>
+      </tr>
+      <h1>Laboral</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Laboral'">
+          <div class="row">
+              <td>{{x.actividad}}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="eliminar(x.id)" *ngIf="ulogged !=''">Eliminar</button>
+                <button class="btn btn-warning btn-sm" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active" *ngIf="ulogged !=''">Modificar</button>
+              </td>
+          </div>
+        </div>
+      </tr>
+      <h1>Proyectos</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Proyectos'">
+          <div class="row">
+              <td>{{x.actividad}}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="eliminar(x.id)" *ngIf="ulogged !=''">Eliminar</button>
+                <button class="btn btn-warning btn-sm" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active" *ngIf="ulogged !=''">Modificar</button>
+              </td>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>

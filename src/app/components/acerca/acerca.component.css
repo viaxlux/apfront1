@@ -1,0 +1,22 @@
+.row{
+  padding: 20px;
+}
+
+div{
+  background-color: #a1b5cb;
+  text-align: center;
+}
+
+p, h1{
+  font-weight:bold;
+}
+
+#max{
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 7px grey;
+
+}
+#nombre{
+  font-weight:bold;
+}
